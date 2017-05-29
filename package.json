@@ -1,0 +1,26 @@
+{
+  "name": "recall-bucket",
+  "version": "0.0.1",
+  "description": "Centralized storage for callbacks.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --reporter spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/draftup/recall-bucket.git"
+  },
+  "keywords": [
+    "callback",
+    "storage",
+    "reactive",
+    "binder",
+    ""
+  ],
+  "author": "negamaxi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/draftup/recall-bucket/issues"
+  },
+  "homepage": "https://github.com/draftup/recall-bucket#readme"
+}
