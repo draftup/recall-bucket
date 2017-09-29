@@ -1,8 +1,8 @@
 {
   "name": "recall-bucket",
-  "version": "0.0.2",
+  "version": "0.0.1",
   "description": "Centralized storage for callbacks",
-  "main": "index.js",
+  "main": "build/index.js",
   "scripts": {
     "test:src": "cross-env TYPE=src mocha",
     "test:build": "cross-env TYPR=build mocha",
