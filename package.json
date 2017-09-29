@@ -1,10 +1,12 @@
 {
   "name": "recall-bucket",
   "version": "0.0.1",
-  "description": "Centralized storage for callbacks.",
+  "description": "Centralized storage for callbacks",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --reporter spec"
+    "test:src": "cross-env TYPE=src mocha",
+    "test:build": "cross-env TYPR=build mocha",
+    "build": "cross-env NODE_ENV=production webpack -p"
   },
   "repository": {
     "type": "git",
@@ -14,13 +16,20 @@
     "callback",
     "storage",
     "reactive",
-    "binder",
-    ""
+    "bucket",
+    "recall"
   ],
   "author": "negamaxi",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/draftup/recall-bucket/issues"
   },
-  "homepage": "https://github.com/draftup/recall-bucket#readme"
+  "homepage": "https://github.com/draftup/recall-bucket#readme",
+  "devDependencies": {
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.0.0",
+    "babel-preset-env": "^1.4.0",
+    "cross-env": "^5.0.5",
+    "webpack": "^3.5.4"
+  }
 }

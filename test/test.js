@@ -1,15 +1,22 @@
-const assert = require('assert')
-const createBucket = require('../index')
+/* eslint-env mocha */
 
-describe('create bucket', function() {
-  it('should return function', function() {
+const assert = require('assert')
+let createBucket
+if (process.env.TYPE === 'src') {
+  createBucket = require('../src')
+} else {
+  createBucket = require('../build')
+}
+
+describe('create bucket', () => {
+  it('should return function', () => {
     const type = typeof createBucket()
     assert.equal('function', type)
   })
 })
 
-describe('add listener', function() {
-  it('should return { done } object', function() {
+describe('add listener', () => {
+  it('should return { done } object', () => {
     const bucket = createBucket()
     const listener = bucket(() => {})
     const key = Object.keys(listener)[0]
@@ -17,8 +24,8 @@ describe('add listener', function() {
   })
 })
 
-describe('pass value', function() {
-  it('should return undefined', function() {
+describe('pass value', () => {
+  it('should return undefined', () => {
     const bucket = createBucket()
     assert.equal(typeof bucket(true), 'undefined')
   })
