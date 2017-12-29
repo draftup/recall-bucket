@@ -6,5 +6,6 @@ webpack.config.js
 .babelrc
 .gitignore
 yarn.lock
+package-lock.json
 *.swp
 
