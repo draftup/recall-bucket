@@ -30,3 +30,21 @@ describe('pass value', () => {
     assert.equal(typeof bucket(true), 'undefined')
   })
 })
+
+describe('remove listener', () => {
+  it('removed listener should not be called', () => {
+    const bucket = createBucket()
+    const listener1 = bucket(value => {
+      throw new Error('Unexpected listener call.')
+    })
+    let secondCallValue
+    const listener2 = bucket(value => {
+      secondCallValue = value
+    })
+    listener1.done()
+    bucket(10)
+    if (secondCallValue !== 10) {
+      throw new Error('Test value mismatch.')
+    }
+  })
+})
