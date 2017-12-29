@@ -1,7 +1,10 @@
 const addListener = (bucket, listener) => {
-  const index = bucket.push(listener) - 1
+  bucket.push(listener)
   return {
-    done: () => delete bucket[index]
+    done: () => {
+      const index = bucket.indexOf(listener)
+      bucket.splice(index, 1)
+    }
   }
 }
 
