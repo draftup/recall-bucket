@@ -30,6 +30,7 @@
     "babel-loader": "^7.0.0",
     "babel-preset-env": "^1.4.0",
     "cross-env": "^5.0.5",
+    "mocha": "^4.1.0",
     "webpack": "^3.5.4"
   }
 }
